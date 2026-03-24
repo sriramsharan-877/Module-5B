@@ -17,8 +17,38 @@ To create and display a **DataFrame** using the **Pandas** library in Python fro
 ---
 
 ## 💻 Program
-Add code here
+```
+# Step 1: Import libraries
+import pandas as pd
+import numpy as np
+
+# Step 2: Create dictionary
+exam_data = {
+    'name': ['Ankit', 'Riya', 'Karan', 'Meena', 'John'],
+    'score': [90, 75, 88, np.nan, 95],
+    'attempts': [1, 2, 1, 3, 1],
+    'qualify': ['Yes', 'No', 'Yes', 'No', 'Yes']
+}
+
+# Step 3: Define index labels
+labels = ['a', 'b', 'c', 'd', 'e']
+
+# Step 4: Create DataFrame
+df = pd.DataFrame(exam_data, index=labels)
+
+# Step 5: Display output
+print(df)
+```
 
 ## Output
+```
+    name  score  attempts qualify
+a  Ankit   90.0         1     Yes
+b   Riya   75.0         2      No
+c  Karan   88.0         1     Yes
+d  Meena    NaN         3      No
+e   John   95.0         1     Yes
+```
 
 ## Result
+a **DataFrame** using the **Pandas** library in Python from a given dictionary, and apply specific index labels to the rows is verified.
